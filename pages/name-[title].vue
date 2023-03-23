@@ -35,7 +35,7 @@ const imgPath = "https://image.tmdb.org/t/p/original";
 const route = useRoute();
 const config = useRuntimeConfig();
 
-const { data } = await useFetch(() => `https://api.themoviedb.org/3/search/movie?api_key=${config.public.apiKey}&language=ko-KR&page=1&query=${route.params.title}`);
+const { data }: any = await useFetch(() => `https://api.themoviedb.org/3/search/movie?api_key=${config.public.apiKey}&language=ko-KR&page=1&query=${route.params.title}`);
 
 const movies: [movie] = data.value.results;
 </script>

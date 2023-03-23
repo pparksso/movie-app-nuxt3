@@ -34,7 +34,7 @@ interface movie {
 const config = useRuntimeConfig();
 const imgPath = "https://image.tmdb.org/t/p/original";
 
-const { data } = await useFetch(
+const { data }: any = await useFetch(
   () => `
 https://api.themoviedb.org/3/movie/popular?api_key=${config.public.apiKey}&language=ko-KR&page=1`
 );
